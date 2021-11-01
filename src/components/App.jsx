@@ -1,20 +1,18 @@
 import React from "react";
-// import ReactDom from 'react-dom';
-import Login from "../Login";
+import Login from "./Login";
 
 let isLoggedIn = false;
 
 function renderConditionally() {
-  if (isLoggedIn) {
+  if (isLoggedIn === true) {
     return <h1>Hello</h1>;
   } else {
-    return <login />;
+    return <Login />;
   }
 }
 
 function App() {
-  return;
-  <div className="container">{renderConditionally()}</div>;
+  return <div className="container">{renderConditionally()}</div>;
 }
 
 export default App;
