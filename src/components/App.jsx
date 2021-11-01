@@ -1,4 +1,5 @@
 import React from "react";
+import Login from '../Login';
 
 let isLoggedIn = false;
 
@@ -6,18 +7,14 @@ function renderConditionally() {
   if(isLoggedIn) return <h1>Hello</h1>
 else {
   return (
-  <form className="form">
-    <input type="text" placeholder="Username" />
-    <input type="password" placeholder="Password" />
-    <button type="submit">Login</button>
-  </form>);
+  <login />);
 }
 
 function App() {
   return
-    <div className="container">
+    (<div className="container">
       {renderConditionally}
-    </div>
-}
+    </div>)
+, document.getElementById('root')}
 
 export default App;
